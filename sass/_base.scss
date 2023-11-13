@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*  General Styles  */
+
+:root {
+  font-size: 10px;
+
+  /* *-*-*-*-*-*-*- Colors *-*-*-*-*-*-*------------------------ */
+  /* 
+      m      = modified
+      l      = light
+      d      = dark
+  */
+
+  --color-primary: rgb(248, 250, 252);
+  --color-secondary: rgb(82, 214, 244);
+  --color-tertiary: rgb(140, 139, 138);
+
+  --color-quaternary: hsl(192, 40%, 42%);
+  --color-quaternary-m-l: hsla(192, 40%, 42%, 0.1);
+  --color-quaternary-m-d: hsla(192, 40%, 42%, 0.8);
+
+  --color-quinary: rgb(53, 54, 56);
+
+  --color-senary: rgb(255, 255, 255);
+
+  --color-septenary: rgb(59, 130, 246);
+
+  /* *-*-*-*-*-*-*- Padding *-*-*-*-*-*-*------------------------ */
+  /* 
+  ----------------------------------------- Sizing
+      xl      = extra large
+      l       = large
+      m       = medium
+      s       = small
+      xs      = extra small
+
+  ----------------------------------------- Orientation
+      h       = horizontal (left & right)
+      v       = vertical (top & bottom)
+  */
+
+  --padding-xl-h: calc(3rem + 6vw);
+  --padding-xl-v: calc(3rem + 6vh);
+
+  --padding-l-h: calc(3rem + 3vw);
+  --padding-l-v: calc(3rem + 3vh);
+
+  --padding-m-h: calc(2rem + 2vw);
+  --padding-m-v: calc(2rem + 2vh);
+
+  --padding-s-h: calc(1rem + 2vw);
+  --padding-s-v: calc(1rem + 2vh);
+
+  --padding-xs-h: calc(0.5rem + 1vw);
+  --padding-xs-v: calc(0.5rem + 1vh);
+
+  /* *-*-*-*-*-*-*- Font *-*-*-*-*-*-*------------------------ */
+  /* 
+      --------------------- Sizing
+      xl    = extra large
+      l     = large
+      m     = medium
+      s     = small
+      xs    = extra small
+      
+      --------------------- Sizing Nature
+      d     = dynamic
+      st    = static
+      
+      --------------------- Family
+      'Montserrat', sans-serif
+      'Varta', sans-serif
+  */
+
+  /* Dynamic */
+  --font-size-d-xl: calc(3rem + 3vw);
+  --font-size-d-l: calc(2rem + 2vw);
+  --font-size-d-m: calc(1rem + 2vw);
+  --font-size-d-s: calc(1rem + 1vw);
+
+  /* Static */
+  --font-size-st-l: 3rem;
+  --font-size-st-m: 2rem;
+  --font-size-st-s: 1.5rem;
+  --font-size-st-xs: 1rem;
+
+  /* Family */
+  --font-family-main: "Montserrat", sans-serif;
+  --font-family-sub: "Varta", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  background-color: var(--color-primary);
+  font-family: var(--font-family-sub);
+  line-height: 1.5;
+}
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   color: Teal !important;
+// }
+
+// p {
+//   color: #ffffff !important;
+// }
+
+// span {
+//   color: Yellow !important;
+// }
+
+#main-container {
+  display: grid;
+  grid-template-columns: [main-start] repeat(16, minmax(min-content, 9.375rem)) [main-end];
+  grid-template-rows: repeat(7, min-content);
+  justify-content: center;
+}

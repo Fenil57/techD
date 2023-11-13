@@ -1,0 +1,161 @@
+#sign-in-container {
+  background-color: var(--color-quinary);
+  padding: var(--padding-xl-v) var(--padding-l-h);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1vw;
+
+  @media screen and (width < 470px) {
+    padding: var(--padding-l-v) var(--padding-s-h);
+    justify-content: center;
+  }
+}
+
+.sign-in {
+  flex-basis: 40%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__mini-title {
+    font-size: calc(0.2rem + var(--font-size-st-xs));
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    color: var(--color-primary);
+    padding: 0.5rem 1rem;
+    background-color: var(--color-septenary);
+    border-radius: 2rem;
+    align-self: flex-start;
+  }
+
+  &__title {
+    font-size: var(--font-size-d-m);
+    color: var(--color-primary);
+    font-weight: 300;
+
+    @media screen and (width < 800px) {
+      font-size: var(--font-size-st-l);
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    & input {
+      padding: 1rem 2rem;
+      border: none;
+      outline: none;
+      background: none;
+      color: var(--color-primary);
+      font-size: var(--font-size-st-s);
+      border-radius: 0.5rem;
+
+      &[type="email"],
+      &[type="password"] {
+        background-color: var(--color-quaternary-m-l);
+      }
+
+      &[type="submit"] {
+        background-color: var(--color-quaternary-m-d);
+        cursor: pointer;
+        margin: 3rem 0;
+      }
+    }
+
+    &--terms {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1.5rem;
+
+      & input {
+        padding: 1rem;
+        appearance: none;
+        background-color: var(--color-primary);
+        border-radius: 50%;
+
+        &:checked {
+          background-color: var(--color-septenary);
+        }
+      }
+
+      & label {
+        font-size: var(--font-size-st-s);
+        color: var(--color-primary);
+
+        & a {
+          color: var(--color-quaternary-m-d);
+        }
+      }
+    }
+
+    &--alternative {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      &__text {
+        text-align: center;
+        font-size: var(--font-size-st-s);
+        color: var(--color-primary);
+      }
+
+      &__facebook,
+      &__google {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+
+        padding: 1rem 2rem;
+        background-color: var(--color-quaternary-m-l);
+        color: var(--color-primary);
+        font-size: var(--font-size-st-s);
+        border-radius: 0.5rem;
+      }
+    }
+
+    &--sign-up {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+
+      & p {
+        color: var(--color-primary);
+        font-size: var(--font-size-st-s);
+      }
+
+      & a {
+        color: var(--color-quaternary-m-d);
+
+        font-size: var(--font-size-st-s);
+      }
+    }
+  }
+
+  &__img {
+    flex-basis: 50%;
+  }
+
+  &__img {
+    img {
+      width: 100%;
+    }
+
+    @media screen and (width < 470px) {
+      display: none;
+    }
+  }
+
+  fieldset {
+    border: none;
+  }
+
+  @media screen and (width < 470px) {
+    flex-basis: 100%;
+  }
+}
